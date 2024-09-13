@@ -2,13 +2,15 @@ package Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
+
+import java.util.List;
 
 @Entity
 public class Address {
 
     @Id
-    @OneToOne
     private int aid;
 
     private String no;
@@ -16,12 +18,18 @@ public class Address {
     private String road;
 
     private String city;
+    @ManyToMany(mappedBy = "address")//inverse End Side
+    private List<Customer> customer;
 
-    public Address(int aid, String no, String road, String city) {
+    public Address(int aid, String no, String road, String city, List<Customer> customer) {
         this.aid = aid;
         this.no = no;
         this.road = road;
         this.city = city;
+        this.customer = customer;
+    }
+
+    public Address() {
     }
 
     public int getAid() {
@@ -56,8 +64,11 @@ public class Address {
         this.city = city;
     }
 
-    public Address() {
+    public List<Customer> getCustomer() {
+        return customer;
     }
 
-
+    public void setCustomer(List<Customer> customer) {
+        this.customer = customer;
+    }
 }

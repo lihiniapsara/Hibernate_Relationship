@@ -5,10 +5,19 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Relationship-In-Hibernate/One-to-One/pom.xml" />
+        <option value="$PROJECT_DIR$/One_to_Many/pom.xml" />
+        <option value="$PROJECT_DIR$/Relationship-In-Hibernate/One_to_Many/pom.xml" />
+        <option value="$PROJECT_DIR$/Many_to_Many/pom.xml" />
+        <option value="$PROJECT_DIR$/Relationship-In-Hibernate/Many_to_Many/pom.xml" />
+        <option value="$PROJECT_DIR$/Relationship-In-Hibernate/One_to_Many/Eager_Fletch/pom.xml" />
+        <option value="$PROJECT_DIR$/Eager_Fletch/pom.xml" />
+        <option value="$PROJECT_DIR$/Lazy_Fletch/pom.xml" />
+        <option value="$PROJECT_DIR$/SQL/pom.xml" />
+        <option value="$PROJECT_DIR$/HQL/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -1,14 +1,12 @@
 package Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Address {
 
     @Id
-    @OneToOne
+
     private int aid;
 
     private String no;
@@ -16,12 +14,18 @@ public class Address {
     private String road;
 
     private String city;
+    @ManyToOne
+    @JoinColumn(name = "s")
+    private Customer customer;
 
     public Address(int aid, String no, String road, String city) {
         this.aid = aid;
         this.no = no;
         this.road = road;
         this.city = city;
+    }
+
+    public Address() {
     }
 
     public int getAid() {
@@ -55,9 +59,4 @@ public class Address {
     public void setCity(String city) {
         this.city = city;
     }
-
-    public Address() {
-    }
-
-
 }
